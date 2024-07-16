@@ -1,0 +1,157 @@
+.header{
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  box-shadow: 0px 10px 5px #d3d3d3;
+}
+.logo{
+  font-weight: bold;
+  font-size: 40px;
+  position: relative;
+  bottom: 30px;
+  left: 12px;
+}
+.headerLinks{
+  display: flex;
+  justify-content: space-around;
+  width:350px;
+  position: relative;
+  top: 12px;
+  list-style-type: none;
+  
+}
+.link{
+  text-decoration: none;
+  color:black
+}
+.res-card{
+  height: 263px;
+  width: 100%;
+  /* border: 1px solid; */
+}
+.res-card:hover{
+  height: 262px;
+  width: 95%;
+  /* border: 1px solid black; */
+}
+.card-image{
+  border-radius: 20px;
+  object-fit: cover;
+  width: 88%;
+  height: 100%;
+}
+.filter{
+  display: flex;
+  justify-content: space-between;
+  width: 530px;
+  margin-bottom: 30px;
+}
+.search{
+  border: 1px solid gray;
+  border-radius: 5px;
+}
+.searchBox{
+  margin-left: 16px;
+  border: none;
+  outline: none;
+}
+@mixin btn($border, $bradius, $bheight, $bwidth, $bcursor) {
+  border: $border;
+  border-radius: $bradius;
+  height: $bheight;
+  width: $bwidth;
+  cursor: $bcursor;
+}
+
+.searchbtn{
+  @include btn(none, 5px, 40px, 74px, pointer)
+}
+.resbtn{
+  @include btn(none, 5px, 40px, 200px, pointer)
+}
+.menucard{
+  /* border: 1px solid gray; */
+  /* border-radius: 20px; */
+  width: 60%;
+  margin: 0px auto 50px auto;
+  
+
+}
+@mixin container($fsize, $fweight, $lheight) {
+  font-Size: $fsize;
+  font-weight: $fweight;
+  line-height: $lheight;
+}
+div.price {
+  @include container(16px, 700,40px);  
+}
+div.cuisines {
+  display: flex;
+  color: rgb(241, 87, 0);
+  @include container(14px, 700,0px);  
+}
+.outlet{
+  display: flex;
+  line-height: 22px;
+}
+.carditems{
+  width: 70%;
+  margin: 0px auto;
+}
+.menuimage{
+  width: 156px;
+  height: 144px;
+  object-fit: cover;
+  border-radius: 20px;
+}
+.hr{
+  border-bottom: .5px solid #d3d3d3;
+  margin: 20px 0;
+}
+.itemName {
+  @include container(18px, 700,10px);  
+}
+.itemprice {
+  @include container(16px, 600,40px);  
+}
+.itemrating {
+  @include container(16px, 600,20px);  
+}
+.itemdesc {
+  @include container(16px, 200,20px);  
+}
+.discount{
+  position: absolute;
+  margin: 125px 3px;
+  width: 150px;
+  background: linear-gradient(90deg, rgb(17, 85, 203) 0%, rgb(83, 140, 238) 25%, rgb(17, 85, 203) 50%, rgba(17, 85, 203, 0.8) 80%, rgba(17, 85, 203, 0) 100%);
+    .discountlabel{
+      color: white;
+      font-size: 14px;
+      font-weight: 700;
+    }
+}
+.category{
+  width: 65%;
+  margin: 30px auto ;
+  font-size: 20px;
+  font-weight: 700;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+}
+.dhr{
+  border:10px solid rgba(2, 6, 12, 0.05);
+  width: 80%;
+  margin: 0px auto;
+}
+.addbtn{
+  position: absolute;
+  margin-left: 50px;
+  button{
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    font-weight: 700;
+  }
+}
